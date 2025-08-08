@@ -74,7 +74,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
   ],
   _repositories+:: [
     orgs.newRepo('arche') {
-      name: "ArchE",
+      name: "arche",
       homepage: "https://projects.eclipse.org/projects/automotive.arche",
       allow_auto_merge: true,
       allow_forking: true,
