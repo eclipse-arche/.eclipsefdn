@@ -32,9 +32,6 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       allowed_actions: "all",
       actions_can_approve_pull_request_reviews: false,
       default_workflow_permissions: "read",
-      dependabot_alerts_enabled_for_new_repositories: true,
-      dependabot_security_updates_enabled_for_new_repositories: true,
-      dependency_graph_enabled_for_new_repositories: true,
     },
   },
   rulesets: [
