@@ -2,19 +2,19 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('automotive.arche', 'eclipse-arche') {
   settings+: {
-    description: "The Eclipse ArchE organization contains the open-sourced resources to develop and build ArchE project, a set of domain-specific-languages created using Jetbrains MPS.",
+    description: "The resources to develop and build DSLs for creating automotive EE & SW architecture using Jetbrains MPS.",
     name: "Eclipse ArchE",
     location: "Germany",
     default_branch_name: "main",
-    default_repository_permission: "write",
+    default_repository_permission: "none",
     has_discussions: true,
-    discussion_source_repository: "arche",
+    discussion_source_repository: "eclipse-arche/arche",
     has_organization_projects: false,
     members_can_change_project_visibility: false,
     members_can_change_repo_visibility: false,
     members_can_create_private_repositories: false,
     members_can_create_public_repositories: false,
-    members_can_create_teams: true,
+    members_can_create_teams: false,
     members_can_delete_repositories: false,
     members_can_delete_issues: true,
     members_can_fork_private_repositories: false,
@@ -36,7 +36,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
   rulesets: [
     orgs.newOrgRuleset('main') {
       include_repo_names: [
-        "arche"
+        "~ALL"
       ],
       target: "branch",
       enforcement: "active",
@@ -58,7 +58,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
     },
     orgs.newOrgRuleset('tags') {
       include_repo_names: [
-        "arche"
+        "~ALL"
       ],
       target: "tag",
       enforcement: "active",
