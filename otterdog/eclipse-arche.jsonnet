@@ -50,7 +50,9 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       },
       required_status_checks: orgs.newStatusChecks() {
         strict: true,
-        status_checks: "build_platform"
+        status_checks: [
+          "build_platform"
+        ]
       },
       requires_linear_history: true,
     },
