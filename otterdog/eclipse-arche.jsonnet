@@ -50,7 +50,6 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       required_pull_request: orgs.newPullRequest() {
         required_approving_review_count: 1,
         dismisses_stale_reviews: false,
-        dismisses_stale_reviews: true,
         requires_review_thread_resolution: true,
       },
       required_status_checks: orgs.newStatusChecks() {
