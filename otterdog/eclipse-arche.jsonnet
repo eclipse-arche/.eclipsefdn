@@ -36,7 +36,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
   rulesets: [
     orgs.newOrgRuleset('main') {
       include_repo_names: [
-        "~ALL"
+        "eclipse-arche/arche"
       ],
       target: "branch",
       enforcement: "active",
@@ -58,7 +58,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
     },
     orgs.newOrgRuleset('tags') {
       include_repo_names: [
-        "~ALL"
+        "eclipse-arche/arche"
       ],
       target: "tag",
       enforcement: "active",
