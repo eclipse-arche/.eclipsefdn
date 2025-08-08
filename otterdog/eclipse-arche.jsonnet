@@ -11,7 +11,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
     dependabot_security_updates_enabled_for_new_repositories: true,
     dependency_graph_enabled_for_new_repositories: true,
     has_discussions: true,
-    discussion_source_repository: "arche"
+    discussion_source_repository: "arche",
     has_organization_projects: false,
     has_repository_projects: false,
     members_can_change_project_visibility: false,
