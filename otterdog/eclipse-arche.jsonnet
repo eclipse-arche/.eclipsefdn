@@ -52,7 +52,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
         dismisses_stale_reviews: false,
         dismisses_stale_reviews: true,
         requires_review_thread_resolution: true,
-      }
+      },
       required_status_checks: orgs.newStatusChecks() {
         strict: true,
         status_checks: "CI MPS Build"
