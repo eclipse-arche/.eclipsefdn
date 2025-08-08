@@ -10,7 +10,6 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
     has_discussions: true,
     discussion_source_repository: "arche",
     has_organization_projects: false,
-    has_repository_projects: false,
     members_can_change_project_visibility: false,
     members_can_change_repo_visibility: false,
     members_can_create_private_repositories: false,
