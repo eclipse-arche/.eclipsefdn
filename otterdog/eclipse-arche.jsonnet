@@ -21,9 +21,6 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
     packages_containers_internal: true,
     packages_containers_public: false,
     readers_can_create_discussions: true,
-    security_managers+: [
-        "automotive-arche-security"
-    ],
     two_factor_requirement: true,
     web_commit_signoff_required: false,
     workflows+: {
@@ -36,7 +33,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
   rulesets: [
     orgs.newOrgRuleset('main') {
       include_repo_names: [
-        "eclipse-arche/arche"
+        "arche"
       ],
       target: "branch",
       enforcement: "active",
@@ -50,7 +47,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       },
       required_status_checks: orgs.newStatusChecks() {
         strict: true,
-        status_checks: [
+        status_checks+: [
           "build_platform"
         ]
       },
@@ -58,7 +55,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
     },
     orgs.newOrgRuleset('tags') {
       include_repo_names: [
-        "eclipse-arche/arche"
+        "arche"
       ],
       target: "tag",
       enforcement: "active",
@@ -66,7 +63,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
         "~ALL"
       ],
       bypass_actors: [
-        "automotive-arche-project-leads"
+        "@eclipse-arche/automotive-arche-project-leads"
       ],
       allows_creations: true,
       allows_deletions: true,
@@ -82,9 +79,10 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       allow_update_branch: true,
       code_scanning_default_setup_enabled: true,
       code_scanning_default_query_suite: "default",
-      code_scanning_default_languages: [
-        "java-kotlin", "javascript-typescript", "python", "actions"
-      ],
+      // Repository does not yet contain sources for those languages, code scanning cannot yet bet defined.
+      // code_scanning_default_languages: [
+      //   "java-kotlin", "javascript-typescript", "python", "actions"
+      // ],
       default_branch: "main",
       delete_branch_on_merge: true,
       dependabot_alerts_enabled: true,
