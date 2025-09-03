@@ -91,7 +91,7 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       has_issues: true,
       squash_merge_commit_title: "PR_TITLE",
       squash_merge_commit_message: "PR_BODY",
-      description: "The repository containing the open-source part of ArchE.",
+      description: "ArchE: Set of domain specific languages to support modeling automotive electronics and software architecture.",
       secret_scanning: "enabled",
       secret_scanning_push_protection: "enabled",
       web_commit_signoff_required: false,
