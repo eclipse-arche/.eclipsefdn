@@ -49,25 +49,9 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
         strict: true,
         status_checks+: [
           "build_platform",
-          "eclipse-eca-validation:eclipsefdn/eca"
         ]
       },
       requires_linear_history: true,
-    },
-    orgs.newOrgRuleset('tags') {
-      include_repo_names: [
-        "arche"
-      ],
-      target: "tag",
-      enforcement: "active",
-      include_refs+: [
-        "~ALL"
-      ],
-      bypass_actors: [
-        "@eclipse-arche/automotive-arche-project-leads"
-      ],
-      allows_creations: true,
-      allows_deletions: true,
     },
   ],
   _repositories+:: [
@@ -81,9 +65,9 @@ orgs.newOrg('automotive.arche', 'eclipse-arche') {
       code_scanning_default_setup_enabled: true,
       code_scanning_default_query_suite: "default",
       // Repository does not yet contain sources for those languages, code scanning cannot yet bet defined.
-      // code_scanning_default_languages: [
-      //   "java-kotlin", "javascript-typescript", "python", "actions"
-      // ],
+      code_scanning_default_languages: [
+        "actions",
+      ],
       default_branch: "main",
       delete_branch_on_merge: true,
       dependabot_alerts_enabled: true,
